@@ -84,7 +84,6 @@ class vm_net_class(object):
 for child in vm_children:
     vm_ip = ""
     vm_mac = ""
-    #print(child.summary.config.name + "_ip")
     vm_host_raw = child.summary.runtime.host
     host_name = vm_host_raw.summary.config.name
     for nic in child.guest.net:
@@ -104,9 +103,8 @@ for child in vm_children:
                         vm_network,
                         child.summary.runtime.powerState,
                         host_name))
-#print('done')
-for child in vm_children:
-    #print(child.summary.config.name + "_props")    
+
+for child in vm_children:   
     vm_host_raw = child.summary.runtime.host
     host_name = vm_host_raw.summary.config.name
     for nic in child.guest.net:
