@@ -23,7 +23,7 @@ service_instance = SmartConnect(host=vcenter, user="user@vsphere.local", pwd='pa
 content=service_instance.content
 
  
-# Method that populates objects of type vimtype
+# Method that populates objects of type vimtype.
 content = service_instance.RetrieveContent()
 container = content.rootFolder
 vm_viewType = [vim.VirtualMachine]
